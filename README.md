@@ -1,3 +1,15 @@
+# Instalación laravel
+
+- [Actualizar kernel linux](https://docs.microsoft.com/es-es/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package)
+
+- [Instalación terminal de windows](https://www.microsoft.com/es-co/p/windows-terminal/9n0dx20hk701?rtc=1&activetab=pivot:overviewtab)
+
+- [Windows WSL Docker](https://docs.docker.com/desktop/windows/wsl/)
+
+- [Errores comunes en la instalación](https://stackoverflow.com/questions/65312815/laravel-installation-sail-problem-23-failed-writing-body)
+
+- [Pagina oficial laravel](https://laravel.com/docs/9.x)
+
 # Material de apoyo
 
 - [Pagina oficial composer](https://getcomposer.org/)
