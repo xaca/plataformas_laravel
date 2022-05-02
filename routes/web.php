@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PhotoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//https://es.stackoverflow.com/questions/283568/error-500-internal-server-error-laravel
+
+//https://stackoverflow.com/questions/64130722/serializableclosure-error-in-laravel-your-serialized-closure-might-have-been-m
+
 /*Route::get('/', function () {
     return view('welcome');
 });*/
@@ -20,3 +25,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',function(){
     return view('index');
 });
+
+Route::resource('/photo',PhotoController::class);
