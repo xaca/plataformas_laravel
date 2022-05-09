@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Libro;
 
-class PhotoController extends Controller
+class LibrosController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        return view("index");
+        return view("libros",["libros"=>Libro::all()]);
     }
 
     /**
@@ -45,7 +46,7 @@ class PhotoController extends Controller
      */
     public function show($id)
     {
-        //
+        return Libro::find($id);
     }
 
     /**

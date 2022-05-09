@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\LibrosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +14,15 @@ use App\Http\Controllers\PhotoController;
 |
 */
 
-//https://es.stackoverflow.com/questions/283568/error-500-internal-server-error-laravel
-
-//https://stackoverflow.com/questions/64130722/serializableclosure-error-in-laravel-your-serialized-closure-might-have-been-m
-
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-});*/
-
-Route::get('/',function(){
-    return view('index');
 });
 
-Route::resource('/photo',PhotoController::class);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+
+Route::resource("libro",LibrosController::class);
+
+require __DIR__.'/auth.php';
