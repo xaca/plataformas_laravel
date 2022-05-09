@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Photo;
 use Illuminate\Http\Request;
 use App\Models\Libro;
 
@@ -24,8 +25,17 @@ class LibrosController extends Controller
      */
     public function create()
     {
-        //
+        echo '<form method="POST" action="/libro">
+                <input type="text" name="nombre" placeholder="Nombre"><br>
+                <input type="text" name="autor" placeholder="Autor"><br>
+                <input type="text" name="descripcion" placeholder="Descripcion"><br>
+                <input type="text" name="precio" placeholder="Precio"><br>
+                <input type="text" name="descuento" placeholder="Descuento"><br>
+                <input type="hidden" name="_token" value="' . csrf_token() . '">
+                <input type="submit" value="Crear Registro">
+            </form>';
     }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -36,6 +46,11 @@ class LibrosController extends Controller
     public function store(Request $request)
     {
         //
+        $photo = Libro::create([
+            'nombre'=>$request->nombre,
+            'apellido'=>$request->apellido,
+        ]);
+        dd($photo);
     }
 
     /**
@@ -46,6 +61,7 @@ class LibrosController extends Controller
      */
     public function show($id)
     {
+
         return Libro::find($id);
     }
 

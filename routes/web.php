@@ -25,4 +25,10 @@ Route::get('/dashboard', function () {
 
 Route::resource("libro",LibrosController::class);
 
+<<<<<<< HEAD
 require __DIR__.'/auth.php';
+=======
+//https://devdojo.com/guide/laravel/models
+
+Route::resource('/photo',PhotoController::class);
+>>>>>>> a401c591e5dd58c810ffba7968c1239a8079b37c
