@@ -13,6 +13,7 @@ use App\Http\Controllers\LibrosController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//https://devdojo.com/guide/laravel/models
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,10 +26,5 @@ Route::get('/dashboard', function () {
 
 Route::resource("libro",LibrosController::class);
 
-<<<<<<< HEAD
-require __DIR__.'/auth.php';
-=======
-//https://devdojo.com/guide/laravel/models
 
-Route::resource('/photo',PhotoController::class);
->>>>>>> a401c591e5dd58c810ffba7968c1239a8079b37c
+require __DIR__.'/auth.php';

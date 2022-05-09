@@ -46,11 +46,14 @@ class LibrosController extends Controller
     public function store(Request $request)
     {
         //
-        $photo = Libro::create([
+        $libro = Libro::create([
             'nombre'=>$request->nombre,
-            'apellido'=>$request->apellido,
+            'autor'=>$request->autor,
+            'descripcion'=>$request->descripcion,
+            'precio'=>$request->precio,
+            'descuento'=>$request->descuento
         ]);
-        dd($photo);
+        dd($libro);
     }
 
     /**
