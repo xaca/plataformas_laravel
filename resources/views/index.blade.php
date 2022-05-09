@@ -32,6 +32,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 
 <body>
+
+    
+    
+    @foreach ($photos as $photo)
+        <p>This is user {{ $photo["nombre"] }}</p>
+    @endforeach
+    {{-- --}}
     <div class="main-sec">
         <!-- //header -->
         <header class="py-sm-3 pt-3 pb-2" id="home">

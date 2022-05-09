@@ -26,4 +26,6 @@ Route::get('/',function(){
     return view('index');
 });
 
+//https://devdojo.com/guide/laravel/models
+
 Route::resource('/photo',PhotoController::class);
