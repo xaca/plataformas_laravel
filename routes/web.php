@@ -24,7 +24,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
-Route::resource("libro",LibrosController::class);
+Route::resource("libro",LibrosController::class)->middleware('auth');
 
 
 require __DIR__.'/auth.php';
